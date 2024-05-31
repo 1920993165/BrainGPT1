@@ -1,7 +1,7 @@
 # BrainGPT1
 
 <p align="center">
-🤗 <a href="https://huggingface.co/THUDM/chatglm3-6b" target="_blank">HF Repo</a> • 🐦 <a href="https://blog.csdn.net/a1920993165/article/details/128007435" target="_blank">blog</a>
+🤗 <a href="https://huggingface.co/ALmonster/braingpt-1.0" target="_blank">HF Repo</a> • 🐦 <a href="https://blog.csdn.net/a1920993165/article/details/128007435" target="_blank">blog</a>
 </p>
 
 
@@ -26,7 +26,7 @@
 
 **BrainGPT1**的基座模型采用了[ChatGLM3](https://github.com/THUDM/ChatGLM3),经过全量微调获得，调用工具的实现方式与ChatGLM3类似。
 
-项目前端使用streamlit框架，主要基于[Streamlit Multimodal Chat Input](https://github.com/het-25/st-multimodal-chatinput/tree/main)和[streamlit-chat](https://github.com/AI-Yash/st-chat) 实现前端的多模态多轮对话效果。
+项目前端使用streamlit框架，主要基于[Streamlit Multimodal Chat Input](https://github.com/het-25/st-multimodal-chatinput/tree/main)和[streamlit-chat](https://github.com/AI-Yash/st-chat) 实现前端的多轮多模态对话效果。
 
 
 
@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ```bash
 cd Models
-git clone https://huggingface.co/
+git clone https://huggingface.co/ALmonster/braingpt-1.0
 git clone https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
 git clone https://huggingface.co/internlm/internlm-xcomposer2-4khd-7b
 ```
