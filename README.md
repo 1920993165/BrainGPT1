@@ -1,10 +1,12 @@
 # BrainGPT1
 
 <p align="center">
-🤗 <a href="https://huggingface.co/THUDM/chatglm3-6b" target="_blank">HF Repo</a> 
+🤗 <a href="https://huggingface.co/THUDM/chatglm3-6b" target="_blank">HF Repo</a> • 🐦 <a href="https://blog.csdn.net/a1920993165/article/details/128007435" target="_blank">blog</a>
 </p>
 
 
+
+**华东师范大学，计算机科学与技术学院，智能教育研究院**，[小怪兽会微笑](mailto:wtliu@stu.ecnu.edu.cn)
 
 ## 介绍
 
@@ -109,6 +111,14 @@ streamlit run web.py
 1. braingpt占显存13.3G左右，stable-diffusion-xl-base-1.0占显存13.5G左右，InternLM-XComposer占显存48G左右。
 2. 如果没有启动stable-diffusion-xl-base-1.0，InternLM-XComposer，但启动了braingpt，除了画图和基于图片问答功能外不受影响
 3. 如果没有足够的显存启动internlm-xcomposer2-4khd-7b，可以考虑修改推理参数，或者换其他更小的模型。
+
+
+
+## Contact
+
+有任何问题或反馈，欢迎联系作者[小怪兽会微笑](mailto:wtliu@stu.ecnu.edu.cn)
+
+
 
 
 
