@@ -1,0 +1,17 @@
+diffusers==0.28.0
+fastapi==0.111.0
+Flask==1.1.2
+numpy==1.24.4
+openpyxl==3.0.7
+Pillow==8.2.0
+Pillow==10.3.0
+pytz==2021.1
+Requests==2.32.3
+rich==13.7.1
+st_multimodal_chatinput==0.1.7
+streamlit==1.35.0
+streamlit_chat==0.1.1
+torch==2.3.0
+transformers==4.41.1
+uvicorn==0.30.0
+websocket_client==1.8.0
