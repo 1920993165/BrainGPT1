@@ -32,10 +32,6 @@
 
 尽管模型在训练的各个阶段都尽力确保数据的合规性和准确性，但由于缺乏实际用户下的训练数据，且模型受概率随机性因素影响，无法保证输出内容的准确。本项目不承担开源模型和代码导致的数据安全、舆情风险或发生任何模型被误导、滥用、传播、不当利用而产生的风险和责任。本项目遵循[BSD 3-Clause License](https://github.com/NExT-GPT/NExT-GPT/blob/main/LICENSE.txt)。
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=1920993165/BrainGPT1&type=Date)](https://star-history.com/#1920993165/BrainGPT1&Date)
-
 
 
 ## Demo
@@ -118,6 +114,10 @@ streamlit run web.py
 
 有任何问题或反馈，欢迎联系作者[小怪兽会微笑](mailto:wtliu@stu.ecnu.edu.cn)
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=1920993165/BrainGPT1&type=Date)](https://star-history.com/#1920993165/BrainGPT1&Date)
 
 
 
