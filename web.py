@@ -4,6 +4,11 @@ from st_multimodal_chatinput import multimodal_chatinput
 from Utils.brain_main import brain_agent
 
 __version__ = "1"
+st.set_page_config(
+    page_title=f"Braingpt v{__version__}",
+    page_icon="🤖",
+)
+st.title(f"Braingpt v{__version__}")
 
 #下面3个参数实际并没有与braingpt关联，有需要可以自己修改一下
 max_length=4096
@@ -19,11 +24,10 @@ ips={
     }
 #sparkapi需要的参数,https://console.xfyun.cn/services/bm35获取
 spark_api_key={
-        'appid':"",
-        'api_secret':"",
-        'api_key':""
+        'appid':"XXXXX",
+        'api_secret':"XXXXXXXXXXXXXXX",
+        'api_key':"XXXXXXXXXXXXXXXXXXXX"
     }
-
 
 def clear_chat_history():
     del st.session_state.past[:]
@@ -51,36 +55,44 @@ def chat_with_braingpt(chat_input_dict):
 
     return True
 
-st.set_page_config(
-    page_title=f"Braingpt v{__version__}",
-    page_icon="🤖",
-)
-st.title(f"Braingpt v{__version__}")
+def init_chat_history():
 
-top = st.container()
-bottom = st.container()
+    if "user_start_time" not in st.session_state:
+        st.session_state.user_start_time=None
+    if "image_base64_string" not in st.session_state:
+        st.session_state.image_base64_string=''
+    if "history_braingpt" not in st.session_state:
+        st.session_state.history_braingpt = []
+    if "history_general_problem" not in st.session_state:
+        st.session_state.history_general_problem = []
+    if "history_chat_image" not in st.session_state:
+        st.session_state.history_chat_image = []
+    if "setdefault" not in st.session_state:
+        st.session_state.setdefault(
+            'past', 
+            []
+        )
+        st.session_state.setdefault(
+            'generated', 
+            []
+        )
 
 chat_input_dict = None
 chat_input_human_message = None
+top = st.container()
+bottom = st.container()
+init_chat_history()
 
-st.session_state.user_start_time=None
-st.session_state.image_base64_string=''
-st.session_state.history_braingpt=[]
-st.session_state.history_general_problem=[]
-st.session_state.history_chat_image=[]
-st.session_state.setdefault(
-    'past', 
-    []
-)
-st.session_state.setdefault(
-    'generated', 
-    []
-)
+
+with bottom:
+    chat_input_dict = multimodal_chatinput(text_color="black")
+    if chat_input_dict:
+        chat_input_human_message=chat_with_braingpt(chat_input_dict)
 
 with top:
     if chat_input_human_message:
-        chat_placeholder = st.empty()
-        with chat_placeholder.container():    
+        # chat_placeholder = st.empty()
+        with st.container():    #chat_placeholder
             for i in range(len(st.session_state['generated'])):                
                 message(
                     st.session_state['past'][i]['data'], 
@@ -99,10 +111,3 @@ with top:
             st.button("清空对话", on_click=clear_chat_history)
 
         chat_input_human_message = None
-
-with bottom:
-    chat_input_dict = multimodal_chatinput(text_color="black")
-    if chat_input_dict:
-        chat_input_human_message=chat_with_braingpt(chat_input_dict)
-
-
