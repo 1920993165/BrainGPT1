@@ -3,7 +3,6 @@ fastapi==0.111.0
 Flask==1.1.2
 numpy==1.24.4
 openpyxl==3.0.7
-Pillow==8.2.0
 Pillow==10.3.0
 pytz==2021.1
 Requests==2.32.3
