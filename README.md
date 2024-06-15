@@ -49,7 +49,7 @@
 ### 1.环境准备
 
 ```bash
-conda env create -n braingpt python=3.8.8
+conda create --name braingpt python=3.8.8
 
 conda activate braingpt 
 
