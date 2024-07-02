@@ -1,6 +1,6 @@
 diffusers==0.28.0
 fastapi==0.111.0
-Flask==1.1.2
+Flask==2.2.5
 numpy==1.24.4
 openpyxl==3.0.7
 Pillow==10.3.0
